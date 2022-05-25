@@ -13,11 +13,14 @@
 
   <body>
     
-    <header>
-      <%= render 'shared/navbar' %>
-    </header>
-
-    <main class="container mt-5">
+    
+    <% if user_signed_in? %>
+      <header>
+        <%= render 'shared/navbar' %>
+      </header>
+    <% end %>
+    
+    <main>
       <%= render 'shared/flash' %>
       <%= yield %>
     </main>
