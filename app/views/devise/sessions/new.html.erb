@@ -1,13 +1,13 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <header>
-    <nav class="navbar bg-primary">
+  <header style="background-color: #3772c2">
+    <nav class="navbar">
       <div class="container-fluid d-flex align-items-center">
-        <%= link_to :back do %> 
+        <%= link_to root_path do %> 
           <%= image_tag "left-arrow.svg", width: '30'%> 
         <% end %>
         <h4 class="text-white">LOGIN</h4>
-        <%= f.submit "Log In", class: "btn btn-primary" %>
+        <%= f.submit "Log In", class: "text-white btn" %>
       </div>
     </nav>
   </header>
