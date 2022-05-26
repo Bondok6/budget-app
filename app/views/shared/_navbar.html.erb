@@ -5,13 +5,13 @@
   </button>
 
   <% if current_page?(authenticated_root_path) %>
-    <h2 class="navbar-brand">Categories</h2>
-  <% elsif current_page?(group_deals_path) %>
-    <h2 class="navbar-brand">Transiction</h2>
-  <% elsif current_page?(new_group_deal_path) %>
-    <h2 class="navbar-brand">Add Deal</h2>
+    <h2 class="navbar-brand">Categories</h2>  
   <% end %>
-  
+    
+  <% if current_page?(new_group_path) %>
+   <h2 class="navbar-brand">Add Category</h2>
+  <% end %>
+   
  
   <%= image_tag "search.svg", width: '25', role: 'button'%> 
   
