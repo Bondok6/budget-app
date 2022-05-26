@@ -11,11 +11,11 @@ RSpec.describe 'Log In page', type: :feature do
     expect(page).to have_field 'Email'
   end
 
-  it "should see the password field" do
+  it 'should see the password field' do
     expect(page).to have_field 'Password'
   end
 
-  it "should see the login button" do
+  it 'should see the login button' do
     expect(page).to have_button 'Log In'
   end
 

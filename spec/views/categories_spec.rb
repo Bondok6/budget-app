@@ -18,11 +18,11 @@ RSpec.describe 'Categories page', type: :feature do
     expect(page).to have_link('Add new Category')
   end
 
-  it "when click on add new category button should go to category#new" do
+  it 'when click on add new category button should go to category#new' do
     click_on 'Add new Category'
     expect(page).to have_current_path(new_group_path)
   end
-  
+
   it 'should be able to save category' do
     click_on 'Add new Category'
     fill_in 'Name', with: 'category 1'

@@ -1,4 +1,4 @@
-class GroupDeal< ApplicationRecord
+class GroupDeal < ApplicationRecord
   belongs_to :group
   belongs_to :deal
 
