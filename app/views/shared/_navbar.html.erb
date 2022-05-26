@@ -1,9 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
-
   <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
 
   <% if current_page?(authenticated_root_path) %>
     <h2 class="navbar-brand">CATEGORIES</h2>  
@@ -12,26 +10,19 @@
     <% else %>
      <h2 class="navbar-brand">TRANSACTIONS</h2>
   <% end %>
-   
   
- 
   <%= image_tag "search.svg", width: '25', role: 'button'%> 
   
-
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto my-3 mb-lg-0">
-
         <li class="nav-item mb-2">
           <%= link_to 'Categories', root_path, class: 'nav-link btn ' %>
         </li>
-
         <li class="nav-item">
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'nav-link btn btn-outline-danger' %>
         </li>
       </ul>
-
     </div>
   </div>
-
 </nav>

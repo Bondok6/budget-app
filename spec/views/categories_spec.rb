@@ -15,16 +15,16 @@ RSpec.describe 'Categories page', type: :feature do
   end
 
   it 'should be able to redirect to add new category' do
-    expect(page).to have_link('Add new Category')
+    expect(page).to have_link('Add New Category')
   end
 
   it 'when click on add new category button should go to category#new' do
-    click_on 'Add new Category'
+    click_on 'Add New Category'
     expect(page).to have_current_path(new_group_path)
   end
 
   it 'should be able to save category' do
-    click_on 'Add new Category'
+    click_on 'Add New Category'
     fill_in 'Name', with: 'category 1'
     fill_in 'Icon', with: 'url'
     click_on 'Save'
