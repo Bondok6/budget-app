@@ -23,6 +23,6 @@ RSpec.describe 'Log In page', type: :feature do
     fill_in 'Email', with: @user1.email
     fill_in 'Password', with: @user1.password
     click_button 'Log In'
-    expect(page).to have_content('Categories')
+    expect(page).to have_content('CATEGORIES')
   end
 end

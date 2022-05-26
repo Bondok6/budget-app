@@ -24,7 +24,7 @@ RSpec.describe 'Signup page', type: :feature do
     fill_in 'Password', with: @user1.password
     fill_in 'Repeat Password', with: @user1.password_confirmation
     click_button 'NEXT'
-    expect(page).to have_content('Categories')
+    expect(page).to have_content('CATEGORIES')
   end
 
   it 'should error appears if you entered wrong data' do

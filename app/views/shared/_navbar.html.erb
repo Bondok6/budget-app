@@ -4,14 +4,16 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+
   <% if current_page?(authenticated_root_path) %>
-    <h2 class="navbar-brand">Categories</h2>  
-  <% end %>
-    
-  <% if current_page?(new_group_path) %>
-   <h2 class="navbar-brand">Add Category</h2>
+    <h2 class="navbar-brand">CATEGORIES</h2>  
+    <% elsif current_page?(new_group_path) %>
+     <h2 class="navbar-brand">Add Category</h2>
+    <% else %>
+     <h2 class="navbar-brand">TRANSACTIONS</h2>
   <% end %>
    
+  
  
   <%= image_tag "search.svg", width: '25', role: 'button'%> 
   

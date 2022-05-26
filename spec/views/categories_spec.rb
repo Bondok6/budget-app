@@ -11,7 +11,7 @@ RSpec.describe 'Categories page', type: :feature do
   end
 
   it 'should be able to see categories' do
-    expect(page).to have_content('Categories')
+    expect(page).to have_content('CATEGORIES')
   end
 
   it 'should be able to redirect to add new category' do
