@@ -6,10 +6,10 @@
         <img src="<%= group.icon%>" width="80px">
         <h3 
           class="m-2"><%= group.name %> 
-          <span class="d-block fs-6 mt-2"><%= "#{group.created_at.day}/#{group.created_at.month}/#{group.created_at.year}" %></span>
+          <span class="d-block fs-6 fw-lighter mt-3"><%= "#{group.created_at.day}/#{group.created_at.month}/#{group.created_at.year}" %></span>
         </h3>
         <div class="ms-auto pt-5 pe-3">
-          <%= 250 %> $
+          <%= group.total_deals || 0 %> $
         </div>
       </div>
     <% end %>

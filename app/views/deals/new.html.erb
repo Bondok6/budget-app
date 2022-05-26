@@ -5,11 +5,11 @@
     </div>
 
     <div class="field my-3">
-      <%= f.text_field :amount, autofocus: true, class: "form-control", placeholder: "amount" %>
+      <%= f.number_field :amount, autofocus: true, class: "form-control", placeholder: "amount" %>
     </div>
 
     <div class="field my-3">
-      <%= f.select :groups, options_from_collection_for_select(@available_groups, 'id', 'name'), {}, { class: "form-control" }%>
+      <%= f.select :groups, options_from_collection_for_select(@groups, 'id', 'name'), {}, { class: "form-control" }%>
     </div>
 
     <div class="text-center">

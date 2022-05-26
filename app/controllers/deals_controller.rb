@@ -1,14 +1,13 @@
 class DealsController < ApplicationController
   def index
-    @current_user = current_user
     @group = Group.find(params[:group_id])
-    # @group_deals= Group.find(params[:group_id]).group_deals.order(created_at: :desc)
+    @current_user = current_user
+    @group_deals = Group.find(params[:group_id]).group_deals.order(created_at: :desc)
   end
 
   def new
-    @current_user = current_user
-    @group = Group.find_by_id(params[:group_id])
-    @available_groups = current_user.groups.reject { |f| @group.deals.include?(f) }
+    @group = Group.find(params[:group_id])
+    @groups = current_user.groups
   end
 
   def create
