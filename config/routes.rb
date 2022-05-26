@@ -10,8 +10,9 @@ Rails.application.routes.draw do
     root to: 'groups#index', as: :authenticated_root
   end
 
-  resources :deals, only: [:new, :create, :index, :show]
-  resources :groups, only: [:new, :create, :index, :show]
+  resources :groups, only: [:new, :create, :index] do 
+    resources :deals, only: [:new, :create, :index]
+  end
 
   root to: 'splash#index'
 end

@@ -1,0 +1,19 @@
+<section class="container">
+  <%= form_with url: group_deals_path, method: :post do |f| %>
+    <div class="field my-3">
+      <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "name" %>
+    </div>
+
+    <div class="field my-3">
+      <%= f.text_field :amount, autofocus: true, class: "form-control", placeholder: "amount" %>
+    </div>
+
+    <div class="field my-3">
+      <%= f.select :groups, options_from_collection_for_select(@available_groups, 'id', 'name'), {}, { class: "form-control" }%>
+    </div>
+
+    <div class="text-center">
+      <%= f.submit "Add Deal",  class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</section>
