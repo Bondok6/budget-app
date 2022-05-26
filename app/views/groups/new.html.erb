@@ -1,0 +1,18 @@
+<section class="container">
+
+  <%= form_with model: @group do |form| %>
+    <div class="my-3">
+      <%= form.text_field :name, class: "form-control w-100", placeholder: "Name" %>
+    </div>
+
+    <div class="my-3">
+      <%= form.text_field :icon, class: "form-control w-100", placeholder: "Icon" %>
+    </div>
+
+    <div class="text-center m-3">
+      <%= form.submit "Save", class: "btn btn-primary" %>
+    </div>
+
+  <% end %>
+
+</section>

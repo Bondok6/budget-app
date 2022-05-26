@@ -1,0 +1,22 @@
+<section class="container">
+
+ <% @groups.each do |group| %>
+    <%= link_to group_deals_path(group), class: "text-reset text-decoration-none" do %>
+      <div class="border border-1 d-flex my-3">
+        <img src="<%= group.icon%>" width="80px">
+        <h3 
+          class="m-2"><%= group.name %> 
+          <span class="d-block fs-6 fw-lighter mt-3"><%= "#{group.created_at.day}/#{group.created_at.month}/#{group.created_at.year}" %></span>
+        </h3>
+        <div class="ms-auto pt-5 pe-3">
+          <%= group.total_deals || 0 %> $
+        </div>
+      </div>
+    <% end %>
+ <% end %>
+
+  <div class="fixed-bottom mb-3 text-center">
+   <%= link_to 'Add New Category', new_group_path, class:"btn btn-success fs-3 w-75"  %>
+  </div>
+
+</section>
