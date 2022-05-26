@@ -1,11 +1,11 @@
 <section class="container">
   <%= form_with url: group_deals_path, method: :post do |f| %>
     <div class="field my-3">
-      <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "name" %>
+      <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "name", :required => true %>
     </div>
 
     <div class="field my-3">
-      <%= f.number_field :amount, autofocus: true, class: "form-control", placeholder: "amount" %>
+      <%= f.number_field :amount, autofocus: true, class: "form-control", placeholder: "amount", :required => true%>
     </div>
 
     <div class="field my-3">
