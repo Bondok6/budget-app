@@ -1,0 +1,26 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name)) do |f| %>
+
+  <header style="background-color: #3772c2">
+    <nav class="navbar">
+      <div class="container-fluid d-flex">
+        <%= link_to user_session_path	 do %> 
+          <%= image_tag "left-arrow.svg", width: '30'%> 
+        <% end %>
+        <h4 class="text-white">Forgot your password?</h4>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container mt-5">
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: 'Email' %>
+    </div>
+
+    <div class="actions mt-5 text-center">
+      <%= f.submit "Send me reset password instructions", class: 'btn btn-primary' %>
+    </div>
+  </section>
+
+<% end %> 
